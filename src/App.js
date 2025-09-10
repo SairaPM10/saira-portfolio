@@ -1,14 +1,25 @@
-import './App.css';
+import Navbar from './components/Navbar';
+import Intro from './components/Intro';
+import Work from './components/Work';
+import Skills from './components/Skills';
+import Education from './components/Education';
+import floral from './assets/floral-bg.jpg';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-yellow-100 via-pink-100 to-purple-100">
-      <h1 className="text-4xl font-bold text-indigo-700">
-        Hello Saira and Rishi!
-      </h1>
-      <p className="mt-4 text-lg text-gray-700">
-        Tailwind CSS is working 🎉. Looks cool asf
-      </p>
+    <div>
+      <div
+        className="min-h-screen bg-fixed bg-center bg-cover"
+        style={{ backgroundImage: `url(${floral})` }}
+      >
+        <div className="bg-white/70 min-h-screen">
+          <Navbar />
+          <Intro />
+          <Work />
+          <Skills />
+          <Education />
+        </div>
+      </div>
     </div>
   );
 }
